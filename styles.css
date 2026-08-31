@@ -25,6 +25,8 @@ html {
 body {
   min-height: 100%;
   margin: 0;
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
   color: var(--text);
   background:
     linear-gradient(180deg, rgba(4, 10, 12, 0.2), rgba(4, 10, 12, 0.88)),
@@ -89,7 +91,7 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 18px;
-  padding: 18px clamp(18px, 4vw, 48px);
+  padding: calc(18px + env(safe-area-inset-top)) clamp(18px, 4vw, 48px) 18px;
   background: rgba(4, 10, 12, 0.62);
   border-bottom: 1px solid rgba(181, 232, 224, 0.12);
   backdrop-filter: blur(18px);
@@ -143,6 +145,7 @@ a:hover {
 .theme-picker {
   display: inline-flex;
   align-items: center;
+  flex-wrap: wrap;
   gap: 8px;
 }
 
@@ -157,6 +160,7 @@ a:hover {
 
 select {
   min-width: 118px;
+  max-width: 100%;
   color: var(--text);
   background: rgba(8, 23, 27, 0.78);
   border: 1px solid rgba(181, 232, 224, 0.28);
@@ -1115,17 +1119,22 @@ html[data-theme="dark"] .footer {
   .topbar {
     align-items: flex-start;
     flex-direction: column;
-    padding: 14px 16px;
+    gap: 14px;
+    padding: calc(14px + env(safe-area-inset-top)) max(16px, env(safe-area-inset-right)) 14px max(16px, env(safe-area-inset-left));
   }
 
   .topbar-controls {
     align-items: flex-start;
     flex-direction: column-reverse;
+    gap: 12px;
     width: 100%;
   }
 
   .navlinks {
     justify-content: flex-start;
+    gap: 8px 12px;
+    font-size: 13px;
+    line-height: 1.45;
   }
 
   .brand strong {
@@ -1133,7 +1142,66 @@ html[data-theme="dark"] .footer {
   }
 
   main {
-    padding-top: 44px;
+    width: min(var(--max), calc(100% - 28px));
+    padding-top: 40px;
+    padding-bottom: 42px;
+  }
+
+  .hero {
+    margin-bottom: 24px;
+  }
+
+  .eyebrow {
+    margin-bottom: 12px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+
+  h1 {
+    font-size: clamp(32px, 10vw, 44px);
+    line-height: 1.08;
+  }
+
+  h2 {
+    font-size: 22px;
+    line-height: 1.28;
+  }
+
+  .summary {
+    font-size: 17px;
+    line-height: 1.58;
+  }
+
+  p,
+  li {
+    font-size: 16px;
+    line-height: 1.72;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .link-card {
+    min-height: 0;
+    padding: 20px;
+  }
+
+  .language-picker,
+  .theme-picker {
+    width: 100%;
+  }
+
+  .language-label,
+  .theme-label {
+    min-width: 76px;
+    line-height: 1.3;
+  }
+
+  select {
+    flex: 1 1 170px;
+    min-height: 42px;
+    font-size: 16px;
   }
 
   .meta,
@@ -1146,5 +1214,82 @@ html[data-theme="dark"] .footer {
 
   .guide-step:nth-child(even) .step-copy {
     order: 0;
+  }
+
+  .phone-mock {
+    width: min(100%, 318px);
+    padding: 10px;
+  }
+
+  .phone-screen {
+    min-height: 480px;
+  }
+
+  .mock-tabs {
+    gap: 6px;
+    padding: 10px 12px;
+  }
+
+  .mock-tab,
+  .mock-chip,
+  .mock-button {
+    min-height: 30px;
+    padding-inline: 9px;
+    font-size: 11px;
+  }
+
+  .mock-feature-row {
+    gap: 8px;
+  }
+
+  .mock-feature-row b,
+  .mock-row strong {
+    text-align: right;
+  }
+}
+
+@media (max-width: 430px) {
+  main {
+    width: min(var(--max), calc(100% - 24px));
+    padding-top: 34px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  .feature-pill {
+    padding: 13px;
+  }
+
+  .step-copy h2 {
+    font-size: 24px;
+  }
+
+  .step-list li {
+    padding-left: 22px;
+  }
+
+  .phone-mock {
+    width: min(100%, 292px);
+  }
+
+  .phone-screen {
+    min-height: 450px;
+  }
+
+  .mock-header,
+  .mock-footer {
+    padding: 12px;
+  }
+
+  .mock-card {
+    margin: 10px;
+    padding: 11px;
+  }
+
+  .mock-row,
+  .mock-feature-row {
+    font-size: 12px;
   }
 }
