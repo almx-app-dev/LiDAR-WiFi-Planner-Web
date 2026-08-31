@@ -13,7 +13,7 @@ The site provides the public pages linked from App Store Connect:
 
 ## About this site
 
-This is a small static GitHub Pages site with no build step. Page text and translations live in `site.js` and `product.js`, then render at runtime based on the visitor's browser language or manual selection. Five languages are supported: Traditional Chinese, English, Japanese, Korean, and Simplified Chinese.
+This is a small static GitHub Pages site with no build step. Page text and translations live in `site.js` and `product.js`, then render at runtime based on the visitor's browser language or manual selection. Ten languages are supported: Traditional Chinese, English, German, French, Spanish, Italian, Brazilian Portuguese, Japanese, Korean, and Simplified Chinese.
 
 ## Files
 

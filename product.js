@@ -106,6 +106,82 @@ guide["zh-Hans"] = {
   ]
 };
 
+Object.assign(common, {
+  de: { htmlLang: "de", themeLabel: "Darstellung:", themeAuto: "Automatisch", themeLight: "Hell", themeDark: "Dunkel", navHome: "Start", navProduct: "Produktleitfaden", navSupport: "Support", navPrivacy: "Datenschutzerklärung", navTerms: "Nutzungsbedingungen", topline: "Produktleitfaden", eyebrow: "Product walkthrough", title: "LiDAR WiFi Planner", summary: "Generierte Beispieloberflächen erklären Scan, Vor-Ort-Messung, Heatmap-Auswertung, AP-Simulation, controllergestützte Tests und Berichtsexport.", footer: "Copyright © 2026 ALMX. All rights reserved." },
+  fr: { htmlLang: "fr", themeLabel: "Apparence :", themeAuto: "Automatique", themeLight: "Clair", themeDark: "Sombre", navHome: "Accueil", navProduct: "Guide produit", navSupport: "Support", navPrivacy: "Politique de confidentialité", navTerms: "Conditions d’utilisation", topline: "Guide produit", eyebrow: "Product walkthrough", title: "LiDAR WiFi Planner", summary: "Des écrans générés expliquent le scan, les mesures sur site, la lecture des heatmaps, la simulation d’AP, les tests assistés par contrôleur et l’export de rapports.", footer: "Copyright © 2026 ALMX. All rights reserved." },
+  es: { htmlLang: "es", themeLabel: "Apariencia:", themeAuto: "Automática", themeLight: "Claro", themeDark: "Oscuro", navHome: "Inicio", navProduct: "Guía del producto", navSupport: "Soporte", navPrivacy: "Política de privacidad", navTerms: "Condiciones de uso", topline: "Guía del producto", eyebrow: "Product walkthrough", title: "LiDAR WiFi Planner", summary: "Pantallas generadas explican el escaneo, las mediciones en sitio, la lectura de heatmaps, la simulación de AP, las pruebas con controlador y la exportación de informes.", footer: "Copyright © 2026 ALMX. All rights reserved." },
+  it: { htmlLang: "it", themeLabel: "Aspetto:", themeAuto: "Automatico", themeLight: "Chiaro", themeDark: "Scuro", navHome: "Home", navProduct: "Guida prodotto", navSupport: "Supporto", navPrivacy: "Informativa privacy", navTerms: "Termini di utilizzo", topline: "Guida prodotto", eyebrow: "Product walkthrough", title: "LiDAR WiFi Planner", summary: "Schermate generate spiegano scansione, misure sul campo, lettura heatmap, simulazione AP, test con controller ed esportazione dei report.", footer: "Copyright © 2026 ALMX. All rights reserved." },
+  "pt-BR": { htmlLang: "pt-BR", themeLabel: "Aparência:", themeAuto: "Automática", themeLight: "Clara", themeDark: "Escura", navHome: "Início", navProduct: "Guia do produto", navSupport: "Suporte", navPrivacy: "Política de Privacidade", navTerms: "Termos de Uso", topline: "Guia do produto", eyebrow: "Product walkthrough", title: "LiDAR WiFi Planner", summary: "Telas geradas explicam escaneamento, medições em campo, leitura de heatmaps, simulação de AP, testes com controlador e exportação de relatórios.", footer: "Copyright © 2026 ALMX. All rights reserved." }
+});
+
+Object.assign(guide, {
+  de: {
+    features: [["LiDAR-Grundrisse", "Einmal scannen und speichern"], ["Survey-Heatmaps", "Durchsatz und Latenz messen"], ["AP-Simulation", "Planung für 5 GHz / 2,4 GHz"], ["Export", "PDF, CSV, PNG, SVG"]],
+    noteTitle: "Zu diesen Ansichten",
+    note: "Die folgenden Ansichten sind generierte Lern-Mockups auf Basis der App-Struktur. Die echte App passt sich Gerät, Sprache, Grundriss und Messdaten an.",
+    steps: [
+      ["01", "Grundriss scannen oder laden", "Beginnen Sie mit einem gespeicherten Raumplan. Unterstützt werden RoomPlan-Scan, Beispielpläne, mehrere Grundrisse, Ausrichtung, 3D-Vorschau und 2D-Export.", ["Scan floor plan startet den Scan.", "Nach dem Scan wird der Plan gespeichert.", "Align / Rotate 90° richtet Wandlinien sauber aus."], "plan"],
+      ["02", "Vor Ort stehen und Position antippen", "Der Site-Survey-Ablauf ist bewusst klar: am realen Standort stehen, denselben Punkt im Grundriss antippen und den Test starten.", ["Jeder Punkt speichert Download, Latenz, Jitter, Verlust und Score.", "Ab 3 Punkten entsteht eine interpolierte Heatmap.", "Messpunkte lassen sich wiederholen, löschen oder als CSV exportieren."], "survey"],
+      ["03", "Metriken ohne neue Messung wechseln", "Eine Messung speichert mehrere Kennzahlen, sodass Geschwindigkeit, Stabilität und Qualität aus denselben Daten bewertet werden.", ["Download zeigt den Durchsatz.", "Latency / Jitter / Loss zeigen Stabilität.", "Score fasst zusammen; SNR benötigt Controller-Daten."], "metrics"],
+      ["04", "AP- oder Repeater-Position simulieren", "In der Simulation platzieren Sie mehrere APs und prüfen die erwartete Abdeckung mit FSPL- und Wandverlustmodell, bevor Hardware verschoben wird.", ["Zum Hinzufügen antippen, zum Verschieben ziehen.", "5 GHz ist voreingestellt, damit Wandverluste gut sichtbar werden.", "APs löschen und eine neue Variante testen."], "simulation"],
+      ["05", "Controllergestützte Messwerte nutzen", "Mit einem Aruba Instant Controller kann die App reale Werte wie SNR, zugeordneten AP, Band und Kanal auslesen.", ["Controller-Host, Konto und Passwort eintragen.", "Ein erfolgreicher Test aktiviert die Advanced-Survey-Kennzeichnung.", "Der Controller-Bereich zeigt auch AP-, Client-, RF- und Roaming-Informationen."], "controller"],
+      ["06", "Berichte erstellen und Daten exportieren", "Nach der Messung erstellen Sie einen übergabefähigen Bericht oder exportieren Grundrisse und Rohdaten für Analysen.", ["Ab 3 Punkten kann ein Heatmap-Bericht erzeugt werden.", "Grundrisse als PNG / SVG / DXF exportieren.", "Berichte, CSV und Bilder werden nur geteilt, wenn Sie es auslösen."], "report"]
+    ]
+  },
+  fr: {
+    features: [["Plans LiDAR", "Scanner une fois et conserver"], ["Heatmaps de mesure", "Débit et latence sur points"], ["Simulation d’AP", "Planification 5 GHz / 2,4 GHz"], ["Exports", "PDF, CSV, PNG, SVG"]],
+    noteTitle: "À propos des écrans",
+    note: "Les écrans ci-dessous sont des mockups pédagogiques générés à partir de la structure de l’app. L’app réelle varie selon l’appareil, la langue, le plan et les mesures.",
+    steps: [
+      ["01", "Scanner ou charger un plan", "Commencez par une base de pièce enregistrée. L’app prend en charge RoomPlan, les exemples, plusieurs plans, l’alignement, l’aperçu 3D et l’export 2D.", ["Touchez Scan floor plan pour commencer.", "Le plan est conservé après le scan.", "Align / Rotate 90° permet de redresser les murs."], "plan"],
+      ["02", "Se placer sur site et toucher la position", "Le flux site survey consiste à se tenir au bon endroit, toucher le point correspondant sur le plan, puis lancer le test.", ["Chaque point enregistre débit, latence, gigue, perte et score.", "À partir de 3 points, une heatmap interpolée est créée.", "Les points peuvent être retestés, supprimés ou exportés en CSV."], "survey"],
+      ["03", "Changer de métrique sans remesurer", "Une même mesure conserve plusieurs indicateurs pour analyser débit, stabilité et qualité à partir des mêmes données.", ["Download affiche le débit utile.", "Latency / Jitter / Loss indiquent la stabilité.", "Score agrège les signaux; SNR nécessite un contrôleur."], "metrics"],
+      ["04", "Simuler la position des AP ou répéteurs", "La simulation permet de placer plusieurs AP et d’estimer la couverture avec FSPL et pertes murales avant toute modification matérielle.", ["Touchez le plan pour ajouter un AP, puis faites-le glisser.", "Le 5 GHz est sélectionné par défaut pour visualiser les pertes murales.", "Effacez les AP et testez une autre implantation."], "simulation"],
+      ["05", "Utiliser les mesures du contrôleur", "Avec un contrôleur Aruba Instant, l’app peut lire le SNR réel, l’AP associé, la bande et le canal.", ["Saisissez hôte, compte et mot de passe du contrôleur.", "Un test réussi active le badge de mesure avancée.", "L’onglet Controller affiche aussi AP, clients, RF et roaming."], "controller"],
+      ["06", "Créer des rapports et exporter", "Après les mesures, générez un rapport livrable ou exportez plans et données brutes pour analyse.", ["3 points suffisent pour produire un rapport heatmap.", "Export des plans en PNG / SVG / DXF.", "Rapports, CSV et images ne sont partagés que sur votre action."], "report"]
+    ]
+  },
+  es: {
+    features: [["Planos LiDAR", "Escanear una vez y guardar"], ["Heatmaps de survey", "Velocidad y latencia por punto"], ["Simulación AP", "Planificación 5 GHz / 2,4 GHz"], ["Exportaciones", "PDF, CSV, PNG, SVG"]],
+    noteTitle: "Sobre estas pantallas",
+    note: "Las pantallas son mockups instructivos generados a partir de la estructura de la app. La app real cambia según dispositivo, idioma, plano y datos medidos.",
+    steps: [
+      ["01", "Escanear o cargar un plano", "Empiece con una base guardada. Se admiten escaneo RoomPlan, ejemplos, múltiples planos, alineación, vista 3D y exportación 2D.", ["Toque Scan floor plan para iniciar.", "El plano queda guardado tras escanear.", "Align / Rotate 90° endereza las paredes."], "plan"],
+      ["02", "Situarse en campo y tocar la ubicación", "El survey consiste en estar en la posición real, tocar el mismo punto en el plano y ejecutar la prueba.", ["Cada punto guarda descarga, latencia, jitter, pérdida y puntuación.", "Con 3 puntos se genera una heatmap interpolada.", "Los puntos se pueden repetir, limpiar o exportar como CSV."], "survey"],
+      ["03", "Cambiar métricas sin repetir la medición", "Una medición conserva varios indicadores para diagnosticar velocidad, estabilidad y calidad con los mismos datos.", ["Download muestra throughput.", "Latency / Jitter / Loss muestran estabilidad.", "Score combina resultados; SNR requiere datos del controlador."], "metrics"],
+      ["04", "Simular AP o repetidores", "La simulación permite colocar varios AP y estimar cobertura con FSPL y pérdida por muros antes de mover hardware.", ["Toque para agregar AP y arrastre para mover.", "5 GHz es el valor inicial para evidenciar pérdidas por muros.", "Limpie AP y pruebe otro diseño."], "simulation"],
+      ["05", "Usar lecturas asistidas por controlador", "Con Aruba Instant, la app puede leer SNR real, AP asociado, banda y canal para mejorar la precisión.", ["Ingrese host, cuenta y contraseña.", "Una prueba exitosa habilita el distintivo avanzado.", "Controller también muestra AP, clientes, RF y roaming."], "controller"],
+      ["06", "Crear informes y exportar datos", "Tras medir, genere un informe para el cliente o exporte planos y datos brutos para análisis.", ["Con 3 puntos se puede crear un informe con heatmap.", "Exporte planos PNG / SVG / DXF.", "Informes, CSV e imágenes se comparten solo cuando usted lo decide."], "report"]
+    ]
+  },
+  it: {
+    features: [["Planimetrie LiDAR", "Scansiona una volta e salva"], ["Heatmap sul campo", "Velocità e latenza per punto"], ["Simulazione AP", "Pianificazione 5 GHz / 2,4 GHz"], ["Export", "PDF, CSV, PNG, SVG"]],
+    noteTitle: "Informazioni sulle schermate",
+    note: "Le schermate sono mockup didattici generati dalla struttura dell’app. L’app reale varia in base a dispositivo, lingua, planimetria e dati misurati.",
+    steps: [
+      ["01", "Scansionare o caricare una planimetria", "Parti da una base stanza salvata. Sono supportati RoomPlan, esempi, più planimetrie, allineamento, anteprima 3D ed export 2D.", ["Tocca Scan floor plan per iniziare.", "Dopo la scansione la planimetria viene salvata.", "Align / Rotate 90° raddrizza le pareti."], "plan"],
+      ["02", "Posizionarsi sul posto e toccare il punto", "Il site survey è semplice: stai nel punto reale, tocca lo stesso punto sulla planimetria e avvia il test.", ["Ogni punto salva download, latenza, jitter, perdita e score.", "Da 3 punti viene creata una heatmap interpolata.", "I punti possono essere ripetuti, cancellati o esportati in CSV."], "survey"],
+      ["03", "Cambiare metrica senza rimisurare", "Una misura contiene più metriche, così puoi valutare velocità, stabilità e qualità dagli stessi dati.", ["Download mostra il throughput.", "Latency / Jitter / Loss mostrano stabilità.", "Score è aggregato; SNR richiede il controller."], "metrics"],
+      ["04", "Simulare AP o ripetitori", "La simulazione consente di posizionare più AP e stimare la copertura con FSPL e perdite dei muri prima di spostare hardware.", ["Tocca per aggiungere AP e trascina per spostarli.", "5 GHz è predefinito per evidenziare le perdite dei muri.", "Cancella gli AP e prova un’altra disposizione."], "simulation"],
+      ["05", "Usare letture assistite dal controller", "Con Aruba Instant, l’app può leggere SNR reale, AP associato, banda e canale per maggiore precisione.", ["Inserisci host, account e password del controller.", "Un test riuscito abilita il badge avanzato.", "Controller mostra anche AP, client, RF e roaming."], "controller"],
+      ["06", "Creare report ed esportare dati", "Dopo le misure puoi generare un report consegnabile o esportare planimetrie e dati grezzi.", ["Da 3 punti puoi generare un report heatmap.", "Esporta planimetrie PNG / SVG / DXF.", "Report, CSV e immagini vengono condivisi solo quando lo scegli."], "report"]
+    ]
+  },
+  "pt-BR": {
+    features: [["Plantas LiDAR", "Escaneie uma vez e salve"], ["Heatmaps de campo", "Velocidade e latência por ponto"], ["Simulação de AP", "Planejamento 5 GHz / 2,4 GHz"], ["Exportações", "PDF, CSV, PNG, SVG"]],
+    noteTitle: "Sobre estas telas",
+    note: "As telas abaixo são mockups instrutivos gerados a partir da estrutura do app. O app real muda conforme dispositivo, idioma, planta e dados medidos.",
+    steps: [
+      ["01", "Escanear ou carregar uma planta", "Comece por uma base salva do ambiente. Há suporte a RoomPlan, exemplos, múltiplas plantas, alinhamento, prévia 3D e exportação 2D.", ["Toque em Scan floor plan para começar.", "Depois do escaneamento, a planta fica salva.", "Align / Rotate 90° ajuda a endireitar as paredes."], "plan"],
+      ["02", "Ficar no local e tocar a posição", "O site survey é direto: fique no ponto real, toque o ponto correspondente na planta e inicie o teste.", ["Cada ponto registra download, latência, jitter, perda e pontuação.", "Com 3 pontos, o app gera um heatmap interpolado.", "Pontos podem ser refeitos, apagados ou exportados em CSV."], "survey"],
+      ["03", "Trocar métricas sem medir de novo", "Uma medição salva várias métricas, permitindo avaliar velocidade, estabilidade e qualidade com os mesmos dados.", ["Download mostra o throughput.", "Latency / Jitter / Loss indicam estabilidade.", "Score combina resultados; SNR exige dados do controlador."], "metrics"],
+      ["04", "Simular posição de AP ou repetidor", "A simulação permite posicionar vários APs e estimar cobertura com FSPL e perda por paredes antes de alterar o hardware.", ["Toque para adicionar AP e arraste para mover.", "5 GHz é o padrão para evidenciar perdas por parede.", "Limpe os APs e teste outro layout."], "simulation"],
+      ["05", "Usar leituras assistidas por controlador", "Com Aruba Instant, o app pode ler SNR real, AP associado, banda e canal para melhorar a precisão.", ["Informe host, conta e senha do controlador.", "Um teste bem-sucedido habilita o selo avançado.", "Controller também mostra APs, clientes, RF e roaming."], "controller"],
+      ["06", "Criar relatórios e exportar dados", "Após medir, gere um relatório para o cliente ou exporte plantas e dados brutos para análise.", ["Com 3 pontos, é possível gerar relatório com heatmap.", "Exporte plantas PNG / SVG / DXF.", "Relatórios, CSV e imagens só são compartilhados quando você escolhe."], "report"]
+    ]
+  }
+});
+
 const detailedSteps = {
   "zh-Hant": {
     controllerHub: ["06", "控制器打開後看到什麼", "控制器頁不是只顯示連線成功，而是把控制器能讀到的網路真值整理成入口。你會先看到本機 client 的連線狀態，再看到整個控制器角度的 AP、client 與 RF 功能。", ["本機連線：SNR、關聯 AP、頻段、通道、IP。", "總覽：AP 數、client 數、SSID 與通道概況。", "功能入口：Clients、Roaming、AP load balancing、Trend history、Controller Config、Application visibility、Channels & RF、Controller status、Discovered services。"], "controllerHub"],
@@ -134,6 +210,34 @@ const detailedSteps = {
   }
 };
 
+Object.assign(detailedSteps, {
+  de: {
+    controllerHub: ["06", "Was der Controller-Bereich zeigt", "Der Controller-Bereich ist mehr als ein Verbindungstest. Er bündelt echte Controller-Werte: zuerst die Verbindung dieses Geräts, danach AP-, Client- und RF-Funktionen aus Sicht des Controllers.", ["Lokale Verbindung: SNR, zugeordneter AP, Band, Kanal und IP.", "Überblick: Anzahl der APs, Clients, SSIDs und Kanalstatus.", "Einstiege: Clients, Roaming, AP load balancing, Trend history, Controller Config, Application visibility, Channels & RF, Controller status und Discovered services."], "controllerHub"],
+    reportBuilder: ["08", "Wie der Berichtsgenerator aussieht", "Im Berichtsgenerator wählen Sie Basiskarte, Metriken, Legende, Bewertung und Thema. Er legt keine Screenshots ab, sondern erzeugt aus Messdaten einen A4-Bericht.", ["Wahl zwischen Wandplan und realem Hintergrund.", "Download, Latenz, Jitter, Verlust, Score und bei Verfügbarkeit SNR auswählen.", "Maßstab, Heatmap, Legende, Seitenzahlen, Abnahmebewertung und Standortdaten hinzufügen."], "reportBuilder"],
+    photoReport: ["09", "Wie Fotos in den Bericht kommen", "Wenn Messpunktfotos in Signal Survey aktiviert sind, kann jeder Punkt ein Referenzfoto tragen. Mit Attach site photos werden sie dem PDF als Anhang hinzugefügt.", ["Fotos sind optional und standardmäßig deaktiviert.", "Das PDF nutzt ein 3 × 3-Raster mit bis zu 9 Fotos pro Seite.", "Fotolabels entsprechen den Messpunktnummern und erleichtern die Abnahme."], "photoReport"]
+  },
+  fr: {
+    controllerHub: ["06", "Ce que montre l’onglet Controller", "L’onglet Controller ne se limite pas à vérifier la connexion. Il transforme les données du contrôleur en tableau de bord : d’abord le client local, puis les vues AP, clients et RF.", ["Connexion locale : SNR, AP associé, bande, canal et IP.", "Vue d’ensemble : nombre d’AP, clients, SSID et état des canaux.", "Entrées : Clients, Roaming, AP load balancing, Trend history, Controller Config, Application visibility, Channels & RF, Controller status et Discovered services."], "controllerHub"],
+    reportBuilder: ["08", "À quoi ressemble le générateur de rapport", "Le générateur permet de choisir fond de plan, métriques, légende, verdict et thème. Il ne colle pas des captures : il reconstruit un rapport A4 exploitable à partir des mesures.", ["Choix entre plan des murs seul ou fond avec visuel réel.", "Sélection du débit, latence, gigue, perte, score et SNR si disponible.", "Ajout d’échelle, heatmap, légende, pagination, verdict et informations du site."], "reportBuilder"],
+    photoReport: ["09", "Comment les photos entrent dans le rapport", "Quand les photos de points sont activées dans Signal Survey, chaque point peut recevoir une photo de référence. Activez Attach site photos pour les ajouter au PDF.", ["Les photos sont optionnelles et désactivées par défaut.", "Le PDF ajoute une grille 3 × 3, jusqu’à 9 photos par page.", "Les libellés correspondent aux numéros de points pour faciliter la réception."], "photoReport"]
+  },
+  es: {
+    controllerHub: ["06", "Qué muestra la pestaña Controller", "Controller no es solo una prueba de conexión. Organiza lecturas reales del controlador: primero el cliente local y después las herramientas de AP, clientes y RF.", ["Conexión local: SNR, AP asociado, banda, canal e IP.", "Resumen: cantidad de AP, clientes, SSID y estado de canales.", "Entradas: Clients, Roaming, AP load balancing, Trend history, Controller Config, Application visibility, Channels & RF, Controller status y Discovered services."], "controllerHub"],
+    reportBuilder: ["08", "Cómo se ve el generador de informes", "El generador permite elegir mapa base, métricas, leyenda, veredicto y tema. No pega capturas; reconstruye un informe A4 entregable desde los datos medidos.", ["Mapa solo con paredes o con fondo visual real.", "Selección de descarga, latencia, jitter, pérdida, score y SNR si está disponible.", "Incluye escala, heatmap, leyenda, páginas, veredicto e información del sitio."], "reportBuilder"],
+    photoReport: ["09", "Cómo entran las fotos al informe", "Al activar fotos de puntos en Signal Survey, cada punto puede tener una foto de referencia. Use Attach site photos para añadirlas al PDF.", ["Las fotos son opcionales y están desactivadas por defecto.", "El PDF agrega una grilla 3 × 3, hasta 9 fotos por página.", "Las etiquetas coinciden con los puntos de medición para facilitar la revisión."], "photoReport"]
+  },
+  it: {
+    controllerHub: ["06", "Cosa mostra la scheda Controller", "Controller non è solo un controllo di connessione. Organizza i valori reali letti dal controller: prima il client locale, poi strumenti AP, client e RF.", ["Connessione locale: SNR, AP associato, banda, canale e IP.", "Panoramica: numero AP, client, SSID e stato canali.", "Voci: Clients, Roaming, AP load balancing, Trend history, Controller Config, Application visibility, Channels & RF, Controller status e Discovered services."], "controllerHub"],
+    reportBuilder: ["08", "Com’è il generatore di report", "Il generatore consente di scegliere mappa base, metriche, legenda, giudizio e tema. Non incolla screenshot: ricostruisce un report A4 dai dati misurati.", ["Scelta tra muri soltanto o base con riferimento reale.", "Download, latenza, jitter, perdita, score e SNR se disponibile.", "Aggiunta di scala, heatmap, legenda, pagine, giudizio e dati del sito."], "reportBuilder"],
+    photoReport: ["09", "Come le foto entrano nel report", "Attivando le foto dei punti in Signal Survey, ogni punto può avere una foto di riferimento. Con Attach site photos vengono aggiunte al PDF.", ["Le foto sono opzionali e disattivate di default.", "Il PDF usa una griglia 3 × 3 con massimo 9 foto per pagina.", "Le etichette corrispondono ai punti di misura per una verifica più semplice."], "photoReport"]
+  },
+  "pt-BR": {
+    controllerHub: ["06", "O que a aba Controller mostra", "Controller não é apenas um teste de conexão. Ela organiza leituras reais do controlador: primeiro o cliente local, depois ferramentas de AP, clientes e RF.", ["Conexão local: SNR, AP associado, banda, canal e IP.", "Resumo: quantidade de APs, clientes, SSIDs e status de canais.", "Entradas: Clients, Roaming, AP load balancing, Trend history, Controller Config, Application visibility, Channels & RF, Controller status e Discovered services."], "controllerHub"],
+    reportBuilder: ["08", "Como é o gerador de relatórios", "O gerador permite escolher mapa base, métricas, legenda, avaliação e tema. Ele não cola screenshots; reconstrói um relatório A4 a partir dos dados medidos.", ["Mapa só com paredes ou com fundo visual real.", "Seleção de download, latência, jitter, perda, score e SNR quando disponível.", "Inclui escala, heatmap, legenda, páginas, aprovação e informações do local."], "reportBuilder"],
+    photoReport: ["09", "Como as fotos entram no relatório", "Ao ativar fotos de pontos no Signal Survey, cada ponto pode ter uma foto de referência. Use Attach site photos para adicioná-las ao PDF.", ["Fotos são opcionais e vêm desativadas por padrão.", "O PDF usa grade 3 × 3, até 9 fotos por página.", "Os rótulos correspondem aos pontos de medição para facilitar a conferência."], "photoReport"]
+  }
+});
+
 Object.entries(detailedSteps).forEach(([lang, details]) => {
   const steps = guide[lang].steps;
   steps.splice(5, 0, details.controllerHub);
@@ -144,7 +248,7 @@ Object.entries(guide).forEach(([, data]) => {
   data.steps.forEach((step, index) => { step[0] = String(index + 1).padStart(2, "0"); });
 });
 
-const aliases = { zh: "zh-Hant", "zh-TW": "zh-Hant", "zh-HK": "zh-Hant", "zh-MO": "zh-Hant", "zh-CN": "zh-Hans", "zh-SG": "zh-Hans", "ja-JP": "ja", "ko-KR": "ko", "en-US": "en", "en-GB": "en" };
+const aliases = { zh: "zh-Hant", "zh-TW": "zh-Hant", "zh-HK": "zh-Hant", "zh-MO": "zh-Hant", "zh-CN": "zh-Hans", "zh-SG": "zh-Hans", "ja-JP": "ja", "ko-KR": "ko", "en-US": "en", "en-GB": "en", "de-DE": "de", "de-AT": "de", "de-CH": "de", "fr-FR": "fr", "fr-BE": "fr", "fr-CA": "fr", "fr-CH": "fr", "es-ES": "es", "es-MX": "es", "es-US": "es", "it-IT": "it", pt: "pt-BR", "pt-BR": "pt-BR", "pt-PT": "pt-BR" };
 const select = document.getElementById("languageSelect");
 const themeSelect = document.getElementById("themeSelect");
 
