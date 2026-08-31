@@ -33,6 +33,21 @@ body {
   letter-spacing: 0;
 }
 
+h1,
+h2,
+p,
+li,
+.summary,
+.link-card,
+.feature-pill,
+.step-copy,
+.note-card,
+.meta strong {
+  word-break: normal;
+  overflow-wrap: normal;
+  text-wrap: pretty;
+}
+
 body::before {
   position: fixed;
   inset: 0;
@@ -214,7 +229,7 @@ h1 {
 
 .link-grid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 260px), 1fr));
   gap: 14px;
   margin: 0 0 28px;
 }
@@ -254,7 +269,7 @@ h1 {
 
 .feature-strip {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 190px), 1fr));
   gap: 12px;
   margin-bottom: 26px;
 }
@@ -280,13 +295,13 @@ h1 {
 
 .guide-step {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(260px, 360px);
+  grid-template-columns: minmax(0, 1.2fr) minmax(260px, 340px);
   gap: clamp(18px, 4vw, 34px);
   align-items: center;
 }
 
 .guide-step:nth-child(even) {
-  grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+  grid-template-columns: minmax(260px, 340px) minmax(0, 1.2fr);
 }
 
 .guide-step:nth-child(even) .step-copy {
@@ -295,6 +310,12 @@ h1 {
 
 .step-copy {
   min-width: 0;
+}
+
+.step-copy p,
+.step-list,
+.note-card p {
+  max-width: 68ch;
 }
 
 .step-kicker {
@@ -629,7 +650,7 @@ h1 {
 
 .meta {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr));
   gap: 12px;
   margin-bottom: 26px;
 }
@@ -651,6 +672,10 @@ h1 {
 .meta strong {
   font-size: 15px;
   line-height: 1.35;
+}
+
+.meta a {
+  overflow-wrap: anywhere;
 }
 
 section {
@@ -678,6 +703,11 @@ li {
 
 p {
   margin: 0 0 12px;
+}
+
+section p,
+section ul {
+  max-width: 74ch;
 }
 
 ul {
